@@ -1,0 +1,901 @@
+```html
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Untuk Yuki Azaniah ❤️</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg,#160d2b,#321342,#511b50);
+    color: white;
+    overflow-x: hidden;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.stars,.hearts {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.star {
+    position: absolute;
+    background: white;
+    border-radius: 50%;
+    animation: twinkle 2s infinite alternate;
+}
+
+@keyframes twinkle {
+    from {opacity:.2;transform:scale(.7)}
+    to {opacity:1;transform:scale(1.4)}
+}
+
+.heart-particle {
+    position: absolute;
+    bottom: -50px;
+    animation: floatUp linear forwards;
+}
+
+@keyframes floatUp {
+    to {
+        transform:translateY(-110vh) rotate(360deg);
+        opacity:0;
+    }
+}
+
+button {
+    border: none;
+    cursor: pointer;
+    padding: 14px 30px;
+    border-radius: 30px;
+    background: linear-gradient(90deg,#ff78b7,#d68aff);
+    color: white;
+    font-family: inherit;
+    font-weight: 600;
+    box-shadow: 0 0 25px #ff78b755;
+    transition: .3s;
+}
+
+button:hover {
+    transform: scale(1.08);
+    box-shadow: 0 0 35px #ff78b7;
+}
+
+/* PEMBUKA */
+
+.opening {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    z-index: 10;
+    background: radial-gradient(circle,#652c73,#24102f,#12091e);
+    transition: opacity 1s,visibility 1s;
+}
+
+.opening.hide {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.opening-content {
+    padding: 25px;
+}
+
+.floating-heart {
+    font-size: 75px;
+    animation: heartbeat 1.3s infinite;
+}
+
+@keyframes heartbeat {
+    0%,100% {transform:scale(1)}
+    50% {transform:scale(1.2)}
+}
+
+.small-title,.subtitle {
+    color: #f5a8d0;
+    letter-spacing: 3px;
+    font-size: 11px;
+}
+
+.opening h1 {
+    font-family: 'Dancing Script', cursive;
+    font-size: clamp(55px,12vw,90px);
+    color: #ffb7df;
+    text-shadow: 0 0 30px #ff65bb;
+    margin: 15px 0;
+}
+
+.opening-text {
+    color: #e9cde8;
+    margin-bottom: 30px;
+}
+
+.hint {
+    margin-top: 25px;
+    color: #c9a6ce;
+    font-size: 11px;
+}
+
+/* HALAMAN UTAMA */
+
+.main {
+    position: relative;
+    z-index: 2;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 8%;
+}
+
+.logo {
+    font-family: 'Dancing Script', cursive;
+    font-size: 27px;
+    color: #ffadd7;
+}
+
+.nav-text {
+    color: #d8b8e4;
+    font-size: 12px;
+}
+
+/* HALAMAN UTAMA / HERO */
+
+.hero {
+    min-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.hero-title {
+    font-family: 'Dancing Script', cursive;
+    font-size: clamp(42px,9vw,75px);
+    margin: 20px 0;
+}
+
+.hero-title span {
+    color: #ffadd7;
+    text-shadow: 0 0 30px #ff78b7;
+}
+
+.big-heart {
+    font-size: 100px;
+    margin: 10px;
+    filter: drop-shadow(0 0 25px #ff5ca8);
+    animation: heartbeat 1.2s infinite;
+}
+
+#typing {
+    font-family: 'Dancing Script', cursive;
+    color: #ffb7df;
+    font-size: clamp(24px,5vw,38px);
+    min-height: 65px;
+    max-width: 90%;
+}
+
+.description {
+    color: #d7c1e6;
+    margin-top: 15px;
+}
+
+.scroll {
+    margin-top: 90px;
+    font-size: 10px;
+    letter-spacing: 3px;
+    color: #d4a6dc;
+}
+
+/* PESAN CINTA */
+
+.message-section,.letter-section {
+    padding: 100px 20px;
+    text-align: center;
+}
+
+.glass-card {
+    max-width: 650px;
+    margin: auto;
+    padding: 45px 35px;
+    background: #ffffff12;
+    backdrop-filter: blur(15px);
+    border: 1px solid #ffffff25;
+    border-radius: 25px;
+    box-shadow: 0 0 50px #ff78b715;
+}
+
+.glass-card h2,.letter-section h2 {
+    font-family: 'Dancing Script', cursive;
+    color: #ffb7df;
+    font-size: 43px;
+    margin: 20px 0;
+}
+
+.glass-card p {
+    color: #e4d4ed;
+    line-height: 2;
+    margin: 15px 0;
+}
+
+.signature {
+    font-family: 'Dancing Script', cursive;
+    color: #ff9acb !important;
+    font-size: 27px;
+}
+
+/* AMPLOP SURAT */
+
+.envelope {
+    position: relative;
+    width: min(320px,85vw);
+    height: 220px;
+    margin: 80px auto 35px;
+    perspective: 1000px;
+}
+
+.envelope-back {
+    position: absolute;
+    inset: 0;
+    background: #c96b9d;
+    border-radius: 5px;
+}
+
+.letter {
+    position: absolute;
+    background: #fff0f5;
+    color: #78415f;
+    width: 90%;
+    height: 90%;
+    left: 5%;
+    top: 5%;
+    padding: 18px;
+    border-radius: 5px;
+    overflow-y: auto;
+    transition: transform 1s;
+    z-index: 2;
+}
+
+.letter h3 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 24px;
+}
+
+.letter p {
+    font-size: 10px;
+    line-height: 1.8;
+    margin: 12px 0;
+}
+
+.letter-end {
+    color: #c94f91;
+}
+
+.envelope-front {
+    position: absolute;
+    inset: 0;
+    z-index: 3;
+    background: #e58ab5;
+    clip-path: polygon(0 0,50% 60%,100% 0,100% 100%,0 100%);
+}
+
+.envelope-flap {
+    position: absolute;
+    inset: 0;
+    z-index: 4;
+    background: #f0a1c8;
+    clip-path: polygon(0 0,100% 0,50% 60%);
+    transform-origin: top;
+    transition: transform .8s;
+}
+
+.envelope.open .envelope-flap {
+    transform: rotateX(180deg);
+    z-index: 1;
+}
+
+.envelope.open .letter {
+    transform: translateY(-150px);
+}
+
+/* PENUTUP */
+
+.final-section {
+    text-align: center;
+    padding: 120px 20px;
+}
+
+.final-heart {
+    font-size: 80px;
+    animation: heartbeat 1s infinite;
+}
+
+.final-section h1 {
+    font-family: 'Dancing Script', cursive;
+    font-size: clamp(45px,8vw,75px);
+    color: #ffadd7;
+    margin: 25px 0;
+}
+
+.final-section p {
+    color: #dfc5e9;
+    line-height: 2;
+}
+
+.final-section h2 {
+    font-family: 'Dancing Script', cursive;
+    font-size: clamp(35px,8vw,55px);
+    color: white;
+    margin: 30px;
+}
+
+.final-small {
+    margin-bottom: 30px;
+    font-size: 13px;
+}
+
+/* KEJUTAN */
+
+.popup {
+    position: fixed;
+    inset: 0;
+    z-index: 20;
+    background: #100819dd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.popup-card {
+    background: linear-gradient(135deg,#53244f,#321b48);
+    border: 1px solid #ffadd7;
+    border-radius: 25px;
+    padding: 40px 25px;
+    max-width: 400px;
+    text-align: center;
+    box-shadow: 0 0 50px #ff78b755;
+}
+
+.popup-heart {
+    font-size: 65px;
+}
+
+.popup-card h2 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 38px;
+    color: #ffadd7;
+    margin: 20px;
+}
+
+.popup-card p {
+    color: #e9d6ed;
+    line-height: 1.8;
+}
+
+.popup-signature {
+    margin: 15px 0;
+}
+
+/* MUSIK */
+
+.music-button {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    z-index: 15;
+    width: 50px;
+    height: 50px;
+    padding: 0;
+    border-radius: 50%;
+    font-size: 20px;
+}
+
+.music-button.playing {
+    animation: heartbeat 1.5s infinite;
+}
+
+/* FOOTER */
+
+footer {
+    text-align: center;
+    padding: 30px;
+    color: #bda1ca;
+    font-size: 11px;
+    line-height: 2;
+}
+
+/* TAMPILAN HP */
+
+@media(max-width:600px) {
+    nav {padding:20px}
+    .nav-text {font-size:9px}
+    .glass-card {padding:35px 20px}
+    .scroll {margin-top:60px}
+}
+</style>
+</head>
+
+<body>
+
+<div class="stars" id="stars"></div>
+<div class="hearts" id="hearts"></div>
+
+<!-- PEMBUKA -->
+<section id="opening" class="opening">
+
+    <div class="opening-content">
+
+        <div class="floating-heart">💗</div>
+
+        <p class="small-title">SEBUAH KEJUTAN KECIL UNTUK</p>
+
+        <h1>Yuki Azaniah</h1>
+
+        <p class="opening-text">
+            Ada sesuatu yang spesial ingin Mimin tunjukkan pada Yuki...
+        </p>
+
+        <button id="startButton">
+            Buka Kejutanmu ♡
+        </button>
+
+        <p class="hint">
+            Dibuat dengan penuh cinta, khusus untuk Yuki.
+        </p>
+
+    </div>
+</section>
+
+
+<!-- HALAMAN UTAMA -->
+<main id="main" class="main hidden">
+
+    <nav>
+        <span class="logo">Untuk Yuki ♡</span>
+        <span class="nav-text">Istri Kesayangan mimin</span>
+    </nav>
+
+
+    <!-- HALAMAN UTAMA -->
+    <section class="hero">
+
+        <p class="subtitle">UNTUK MY ISTRI BINI GWEH (MIMIN)</p>
+
+        <h1 class="hero-title">
+            Halo, <span>Yuki!</span>
+        </h1>
+
+        <div class="big-heart">❤️</div>
+
+        <h2 id="typing"></h2>
+
+        <p class="description">
+            Di antara banyaknya bintang, Yuki adalah salah satu yang paling istimewa.
+        </p>
+
+        <div class="scroll">
+            GULIR KE BAWAH UNTUK MELIHAT ↓
+        </div>
+
+    </section>
+
+
+    <!-- PESAN CINTA -->
+    <section class="message-section">
+
+        <div class="glass-card">
+
+            <p class="subtitle">ADA SESUATU YANG INGIN MIMIN SAMPAIKAN</p>
+
+            <h2>Sebuah Pesan Untuk Yuki Tercinta 💌</h2>
+
+            <p>
+                Terkadang, hal-hal sederhana justru menjadi
+                kenangan yang paling indah.
+            </p>
+
+            <p>
+                Entah bagaimana, kehadiranmu membuat
+                hari-hari mimin biasa terasa jauh lebih istimewa.
+            </p>
+
+            <p>
+                Mimin mungkin tidak selalu punya kata-kata
+                yang sempurna, tetapi Mimin ingin Yukitahu
+                bahwa Yuki sangat berarti.
+            </p>
+
+            <p class="signature">
+                Yuki adalah istimewa. ♡
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- SURAT CINTA -->
+    <section class="letter-section">
+
+        <p class="subtitle">SEPOTONG SURAT DARI MIMIN</p>
+
+        <h2>Buka Surat Ini 💗</h2>
+
+        <div class="envelope" id="envelope">
+
+            <div class="envelope-back"></div>
+
+            <div class="letter">
+
+                <h3>Untuk Yuki tersayang,</h3>
+
+                <p>
+                    Mimin mungkin tidak selalu pandai mengungkapkan
+                    perasaan melalui kata-kata.
+                    Namun, Mimin harap Yuki selalu tahu
+                    betapa istimewanya dirimu bagiku.
+                </p>
+
+                <p>
+                    Terima kasih sudah menjadi dirimu sendiri.
+                    Terima kasih untuk setiap cerita,
+                    perhatian, dan momen kecil yang kita lalui.
+                </p>
+
+                <p>
+                    Sesibuk apa pun kehidupan nanti,
+                    semoga kita tidak pernah berhenti
+                    menciptakan kenangan indah bersama.
+                </p>
+
+                <p>
+                    Mimin tidak tahu bagaimana perjalanan kita
+                    ke depannya, tetapi Mimin ingin menjalaninya
+                    dengan penuh kesabaran dan ketulusan.
+                </p>
+
+                <h3 class="letter-end">
+                    Dengan penuh cinta, selalu. ❤️
+                </h3>
+
+            </div>
+
+            <div class="envelope-front"></div>
+            <div class="envelope-flap"></div>
+
+        </div>
+
+        <button id="letterButton">
+            Buka Surat 💌
+        </button>
+
+    </section>
+
+
+    <!-- PENUTUP -->
+    <section class="final-section">
+
+        <div class="final-heart">💗</div>
+
+        <h1>Kamu Sangat Berarti.</h1>
+
+        <p>
+            Dari sekian banyak hal indah di dunia,
+            aku bersyukur bisa mengenalmu.
+        </p>
+
+        <h2>YUKI AZANIAH (RAHMAH) ♡</h2>
+
+        <p class="final-small">
+            Website kecil ini dibuat khusus untukmu,
+            dengan sepenuh hati.
+        </p>
+
+        <button onclick="showSurprise()">
+            Ada Satu Kejutan Lagi ✨
+        </button>
+
+    </section>
+
+
+    <footer>
+        Dibuat dengan ❤️ khusus untuk Yuki.
+        <br>
+        © 2026 — Sebuah Semesta Kecil Penuh Cinta
+    </footer>
+
+</main>
+
+
+<!-- POPUP KEJUTAN -->
+<div id="popup" class="popup hidden">
+
+    <div class="popup-card">
+
+        <div class="popup-heart">💖</div>
+
+        <h2>Terima Kasih, Yuki!</h2>
+
+        <p>
+            Semoga kebahagiaan selalu menyertaimu,
+            hari ini, esok, dan seterusnya.
+        </p>
+
+        <p class="popup-signature">
+            Jangan lupa bahagia dan selalu tersenyum. ♡
+        </p>
+
+        <button onclick="closePopup()">
+            Tutup ♡
+        </button>
+
+    </div>
+
+</div>
+
+
+<!-- MUSIK LATAR -->
+<audio id="music" loop>
+    <source src="assets/music.mp3" type="audio/mpeg">
+</audio>
+
+<button id="musicButton" class="music-button hidden">
+    🎵
+</button>
+
+
+<script>
+
+// ==============================
+//   UNTUK YUKI AZANIAH (RAHMAH)
+// ==============================
+
+
+// PEMBUKA
+const opening = document.getElementById("opening");
+const main = document.getElementById("main");
+const startButton = document.getElementById("startButton");
+
+const music = document.getElementById("music");
+const musicButton = document.getElementById("musicButton");
+const typing = document.getElementById("typing");
+
+startButton.addEventListener("click", () => {
+
+    opening.classList.add("hide");
+
+    setTimeout(() => {
+
+        opening.style.display = "none";
+        main.classList.remove("hidden");
+        musicButton.classList.remove("hidden");
+
+        window.scrollTo(0,0);
+
+    },1000);
+
+    music.play().then(() => {
+        musicButton.classList.add("playing");
+    }).catch(() => {
+        console.log("Musik belum dapat diputar.");
+    });
+
+});
+
+
+// ANIMASI MENGETIK
+const messages = [
+
+    "Yuki adalah kebahagiaan Mimin. ❤️",
+    "Yuki selalu punya tempat istimewa di hati Mimin. 💗",
+    "Hari-hari Mimin lebih indah karena kehadiran Yuki.",
+    "Mimin bersyukur bisa mengenalmu, Yuki. ✨",
+    "Yuki adalah cerita indah yang ingin Mimin jaga. 💌",
+    "Semoga kita selalu saling menguatkan. ♡"
+
+];
+
+let messageIndex = 0;
+let characterIndex = 0;
+let deleting = false;
+
+function typeEffect() {
+
+    const currentMessage = messages[messageIndex];
+
+    if (!deleting) {
+
+        typing.textContent =
+            currentMessage.substring(0,characterIndex + 1);
+
+        characterIndex++;
+
+        if(characterIndex === currentMessage.length) {
+
+            deleting = true;
+
+            setTimeout(typeEffect,2000);
+            return;
+
+        }
+
+    } else {
+
+        typing.textContent =
+            currentMessage.substring(0,characterIndex - 1);
+
+        characterIndex--;
+
+        if(characterIndex === 0) {
+
+            deleting = false;
+
+            messageIndex =
+                (messageIndex + 1) % messages.length;
+
+        }
+
+    }
+
+    setTimeout(typeEffect,deleting ? 35 : 75);
+
+}
+
+typeEffect();
+
+
+// LOVE MELAYANG
+const heartsContainer = document.getElementById("hearts");
+
+const heartSymbols = [
+    "❤️","💗","💕","💖","♡","💘","💞"
+];
+
+function createHeart() {
+
+    const heart = document.createElement("span");
+
+    heart.className = "heart-particle";
+
+    heart.textContent =
+        heartSymbols[Math.floor(Math.random()*heartSymbols.length)];
+
+    heart.style.left = Math.random()*100 + "%";
+
+    heart.style.fontSize =
+        (12 + Math.random()*25) + "px";
+
+    const duration = 5 + Math.random()*7;
+
+    heart.style.animationDuration = duration + "s";
+
+    heartsContainer.appendChild(heart);
+
+    setTimeout(() => {
+        heart.remove();
+    },duration*1000);
+
+}
+
+setInterval(createHeart,350);
+
+
+// BINTANG BERKILAU
+const starsContainer = document.getElementById("stars");
+
+for(let i=0;i<100;i++) {
+
+    const star = document.createElement("div");
+
+    star.className = "star";
+
+    star.style.left = Math.random()*100 + "%";
+    star.style.top = Math.random()*100 + "%";
+
+    const size = Math.random()*3+1;
+
+    star.style.width = size+"px";
+    star.style.height = size+"px";
+
+    star.style.animationDelay =
+        Math.random()*3+"s";
+
+    starsContainer.appendChild(star);
+
+}
+
+
+// SURAT CINTA
+const envelope = document.getElementById("envelope");
+const letterButton = document.getElementById("letterButton");
+
+let letterOpened = false;
+
+letterButton.addEventListener("click", () => {
+
+    letterOpened = !letterOpened;
+
+    envelope.classList.toggle("open");
+
+    letterButton.textContent = letterOpened
+        ? "Tutup Surat 💗"
+        : "Buka Surat 💌";
+
+});
+
+
+// KONTROL MUSIK
+musicButton.addEventListener("click", () => {
+
+    if(music.paused) {
+
+        music.play();
+
+        musicButton.classList.add("playing");
+
+    } else {
+
+        music.pause();
+
+        musicButton.classList.remove("playing");
+
+    }
+
+});
+
+
+// KEJUTAN TERAKHIR
+function showSurprise() {
+
+    document.getElementById("popup")
+        .classList.remove("hidden");
+
+    for(let i=0;i<35;i++) {
+
+        setTimeout(createHeart,i*70);
+
+    }
+
+}
+
+function closePopup() {
+
+    document.getElementById("popup")
+        .classList.add("hidden");
+
+}
+
+</script>
+
+</body>
+</html>
+```
